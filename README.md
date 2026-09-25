@@ -15,19 +15,20 @@ Topik halaman saya: Rencana Belajar Harian Saya
 ## Catatan penggunaan AI
 Menggunakkan AI untuk perbaikan kode html
 
+
 ## Pertemuan 4 - Designtoken halaman profil
 
 - Berkas gaya yang akan dibuat: tokens.css, base.css,
   layout.css, komponen.css, tema.css
-- Warna utama: #E89AB2 (pink pastel), dipilih karena ...
+- Warna utama: #E89AB2 (pink pastel), dipilih karena sesuai dengan tema yang saya inginkan.
  
 ### Token yang saya tetapkan
  
 | Token | Nilai | Untuk apa |
 |---|---|---|
-| --color-primary | #1D3A8C | tombol, tautan, penanda |
-| --color-fg | #0F172A | warna teks utama |
-| --color-bg | #F8FAFC | latar halaman |
+| --color-primary | #E89AB2 | tombol, tautan, penanda |
+| --color-fg | #3D3035 | warna teks utama |
+| --color-bg | #FFF7FA | latar halaman |
 | --radius-md | 0.5rem | sudut tombol dan kartu |
 | --space-4 | 1rem | jarak standar antar elemen |
  

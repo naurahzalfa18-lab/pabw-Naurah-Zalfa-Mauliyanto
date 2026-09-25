@@ -1,0 +1,33 @@
+:root {
+  --pink-700: #D9799A;
+  --pink-500: #C95C7A;
+  --pink-100: #FFF7FA;
+  --gray-900: #3D3035;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+
+  --radius-md: 0.5rem;
+  --shadow-1: 0 1px 3px rgba(0, 0, 0, .10);
+
+  --text-sm: 0.875rem;
+  --text-md: 1rem;
+  --text-xl: 1.5rem;
+  --text-3xl: 2.25rem;
+}
+
+:root {
+  --color-bg: var(--pink-100);
+  --color-fg: var(--gray-900);
+  --color-surface: #FFFFFF;
+  --color-border: #F3C6D3;
+  --color-primary: var(--pink-700);
+  --color-danger: #B84D6D;
+  --color-focus: var(--pink-500);
+
+  --card-pad: var(--space-4);
+  --section-gap: var(--space-6);
+}
