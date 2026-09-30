@@ -34,3 +34,6 @@ Menggunakkan AI untuk perbaikan kode html
  
 Kriteria selesai saya: mengubah --color-primary di satu baris
 harus mengubah warna tombol, tautan, judul, dan garis fokus.
+
+## Catatan penggunaan AI
+Menggunakkan AI untuk menentukan warna, dan kontras rasio

@@ -1,0 +1,189 @@
+.page {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100dvh;
+}
+
+header {
+    padding-block: var(--space-4);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.header-baris {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    align-items: stretch;
+}
+
+.deskripsi-header {
+    margin: 0;
+}
+
+.navigasi-bawah {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
+}
+
+.navbar {
+    display: flex;
+    gap: var(--space-4);
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    gap: var(--space-4);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* LAYOUT UTAMA */
+.isi {
+    display: grid;
+    grid-template-columns: 16rem 1fr;
+    grid-template-areas:
+        "sisi utama";
+    gap: var(--space-6);
+    padding-block: var(--space-6);
+}
+
+.sisi {
+    grid-area: sisi;
+    min-width: 0;
+    background: var(--color-surface);
+    padding: var(--space-4);
+    border-radius: var(--radius-md);
+}
+
+.utama {
+    grid-area: utama;
+    min-width: 0;
+}
+
+
+/* TABEL */
+table {
+    width: 100%;
+}
+
+caption {
+    text-align: left;
+    margin-bottom: var(--space-2);
+}
+
+
+/* FORM */
+.sisi form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.sisi input {
+    width: 100%;
+}
+
+
+/* FOTO DAN CAPTION */
+figure {
+    display: grid;
+    grid-template-columns: 30rem 1fr;
+    gap: var(--space-4);
+    align-items: center;
+    margin: var(--space-4) 0 0;
+}
+
+figure img {
+    display: block;
+    width: 30rem;
+    height: 22rem;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+}
+
+figcaption {
+    margin: 0;
+}
+
+
+/* KOMPONEN TAMBAHAN WORKSHEET */
+.galeri {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: var(--space-4);
+}
+
+.kartu__kaki {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-2);
+}
+
+.galeri .kartu {
+    display: grid;
+    align-content: start;
+    min-height: 14rem;
+}
+
+.kartu__isi {
+    min-width: 0;
+}
+
+.kartu__judul {
+    overflow-wrap: anywhere;
+}
+
+.sorotan {
+    grid-column: span 2;
+}
+
+.papan {
+    grid-row: span 2;
+}
+
+
+/* FOOTER */
+footer {
+    padding-block: var(--space-4);
+    border-top: 1px solid var(--color-border);
+    color: var(--color-fg);
+    font-size: var(--text-sm);
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 700px) {
+
+    .isi {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "sisi"
+            "utama";
+    }
+
+    figure {
+        grid-template-columns: 1fr;
+    }
+
+    figure img {
+        width: 100%;
+        max-width: 30rem;
+        height: 22rem;
+    }
+
+}
