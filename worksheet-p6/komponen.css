@@ -50,12 +50,6 @@ input:user-invalid {
     display: block;
 }
 
-.galeri {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
-    gap: var(--space-4);
-}
-
 .kartu {
     display: flex;
     flex-direction: column;

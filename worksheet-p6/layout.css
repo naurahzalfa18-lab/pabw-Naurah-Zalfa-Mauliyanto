@@ -50,13 +50,12 @@ nav a:hover {
     text-decoration: underline;
 }
 
-
-/* LAYOUT UTAMA */
-.isi {
+.content {
     display: grid;
-    grid-template-columns: 16rem 1fr;
+    grid-template-columns: 1fr;
     grid-template-areas:
-        "sisi utama";
+        "sisi"
+        "utama";
     gap: var(--space-6);
     padding-block: var(--space-6);
 }
@@ -95,7 +94,7 @@ caption {
 
 figure {
     display: grid;
-    grid-template-columns: 30rem 1fr;
+    grid-template-columns: 1fr;
     gap: var(--space-4);
     align-items: center;
     margin: var(--space-4) 0 0;
@@ -103,8 +102,8 @@ figure {
 
 figure img {
     display: block;
-    width: 30rem;
-    height: 22rem;
+    max-width: 100%;
+    height: auto;
     object-fit: cover;
     border-radius: var(--radius-md);
 }
@@ -113,9 +112,9 @@ figcaption {
     margin: 0;
 }
 
-.galeri {
+.grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    grid-template-columns: 1fr;
     gap: var(--space-4);
 }
 
@@ -126,7 +125,7 @@ figcaption {
     gap: var(--space-2);
 }
 
-.galeri .kartu {
+.grid .kartu {
     display: grid;
     align-content: start;
     min-height: 14rem;
@@ -153,25 +152,4 @@ footer {
     border-top: 1px solid var(--color-border);
     color: var(--color-fg);
     font-size: var(--text-sm);
-}
-
-@media (max-width: 700px) {
-
-    .isi {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "sisi"
-            "utama";
-    }
-
-    figure {
-        grid-template-columns: 1fr;
-    }
-
-    figure img {
-        width: 100%;
-        max-width: 30rem;
-        height: 22rem;
-    }
-
 }
