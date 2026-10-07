@@ -70,3 +70,5 @@ const nilai = "80";
 
 console.log(typeof nilai);
 console.log(Number(nilai));
+
+
