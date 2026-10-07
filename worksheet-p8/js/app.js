@@ -65,3 +65,8 @@ const proyekUrut = [...daftarProyek].sort((a, b) => a.tahun - b.tahun);
 
 console.table(proyekUrut);
 console.table(daftarProyek);
+
+const nilai = "80";
+
+console.log(typeof nilai);
+console.log(Number(nilai));
