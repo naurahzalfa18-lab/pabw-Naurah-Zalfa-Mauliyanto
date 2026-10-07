@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <title>Rencana Belajar Harian Saya</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="tokens.css">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="komponen.css">
+    <link rel="stylesheet" href="tema.css">
+    <link rel="stylesheet" href="responsif.css">
+</head>
+
+<body class="page">
+
+    <header id="beranda">
+
+        <div class="header-baris">
+
+            <h1>Rencana Belajar Harian Saya</h1>
+
+            <p class="deskripsi-header">
+                Halaman ini berisi kegiatan belajar yang saya lakukan setiap hari.
+            </p>
+
+            <div class="navigasi-bawah">
+
+                <nav
+                    class="navbar"
+                    aria-label="Navigasi utama"
+                >
+                    <ul>
+                        <li>
+                            <a href="#beranda">Beranda</a>
+                        </li>
+
+                        <li>
+                            <a href="#bagian-1">Jadwal Belajar</a>
+                        </li>
+
+                        <li>
+                            <a href="#bagian-2">Evaluasi Belajar</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <label class="tombol-tema">
+                    <input
+                        type="checkbox"
+                        id="tema"
+                        class="pengalih-tema"
+                    >
+                    Tema gelap
+                </label>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <main class="content">
+
+        <section
+            id="bagian-2"
+            class="sisi"
+        >
+
+            <h2>Evaluasi Belajar</h2>
+
+            <form
+                action="/simpan"
+                method="post"
+            >
+
+                <p>
+                    <label for="materi">
+                        Materi yang dipelajari
+                    </label>
+
+                    <input
+                        type="text"
+                        id="materi"
+                        name="materi"
+                        required
+                    >
+                </p>
+
+                <p>
+                    <label for="catatan-evaluasi">
+                        Catatan Evaluasi
+                    </label>
+
+                    <input
+                        type="text"
+                        id="catatan-evaluasi"
+                        name="catatan-evaluasi"
+                        required
+                    >
+                </p>
+
+                <p>
+                    <label for="rencana-perbaikan">
+                        Rencana Perbaikan
+                    </label>
+
+                    <input
+                        type="text"
+                        id="rencana-perbaikan"
+                        name="rencana-perbaikan"
+                        required
+                    >
+                </p>
+
+                <button type="submit">
+                    Simpan
+                </button>
+
+            </form>
+
+        </section>
+
+        <section
+            id="bagian-1"
+            class="utama"
+        >
+
+            <h2>Jadwal Belajar</h2>
+
+            <div class="table-wrap">
+
+                <table>
+
+                    <caption>
+                        Jadwal Belajar Harian
+                    </caption>
+
+                    <thead>
+                        <tr>
+                            <th scope="col">Hari</th>
+                            <th scope="col">Materi</th>
+                            <th scope="col">Progress</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <th scope="row">Senin</th>
+                            <td>Materi CSS</td>
+                            <td>80%</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">Selasa</th>
+                            <td>Materi JavaScript</td>
+                            <td>80%</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">Rabu</th>
+                            <td>Materi HTML</td>
+                            <td>75%</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">Kamis</th>
+                            <td>Materi Python</td>
+                            <td>60%</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">Jumat</th>
+                            <td>Materi React</td>
+                            <td>50%</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <figure>
+
+                <img
+                    src="belajar.jpe"
+                    alt="A person studying hard and never giving up on their dreams"
+                >
+
+                <figcaption>
+                    A person studying hard and never giving up on their dreams
+                </figcaption>
+
+            </figure>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>
+            Naurah Zalfa Mauliyanto · 25523075 · 2026
+        </p>
+
+    </footer>
+
+    <script type="module" src="js/app.js"></script>
+
+</body>
+</html>
