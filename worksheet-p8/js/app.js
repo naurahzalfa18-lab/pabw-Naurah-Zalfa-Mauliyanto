@@ -30,3 +30,38 @@ const formatKeahlian = (daftar) => {
 
 console.log(buatPerkenalan(profil));
 console.log(formatKeahlian(profil.keahlian));
+
+const daftarProyek = [
+    {
+        judul: "Halaman Profil",
+        tahun: 2026,
+        selesai: true
+    },
+    {
+        judul: "Website Rencana Belajar",
+        tahun: 2026,
+        selesai: true
+    },
+    {
+        judul: "Aplikasi Login",
+        tahun: 2026,
+        selesai: false
+    }
+];
+
+const judulProyek = daftarProyek.map((proyek) => proyek.judul);
+console.table(judulProyek);
+
+const proyekSelesai = daftarProyek.filter((proyek) => proyek.selesai);
+console.table(proyekSelesai);
+
+const proyekLogin = daftarProyek.find(
+    (proyek) => proyek.judul === "Aplikasi Login"
+);
+
+console.log(proyekLogin);
+
+const proyekUrut = [...daftarProyek].sort((a, b) => a.tahun - b.tahun);
+
+console.table(proyekUrut);
+console.table(daftarProyek);
