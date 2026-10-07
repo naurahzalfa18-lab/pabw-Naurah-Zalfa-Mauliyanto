@@ -2,7 +2,7 @@ const nama = "Naurah Zalfa Mauliyanto";
 
 const profil = {
     nama: "Naurah Zalfa Mauliyanto",
-    peran: "Mahasiswa Informatika yang belajar front-end",
+    peran: "Mahasiswa Informatika yang sedang mengembangkan kemampuan di bidang teknologi dan web",
     keahlian: ["HTML", "CSS", "JavaScript"]
 };
 
