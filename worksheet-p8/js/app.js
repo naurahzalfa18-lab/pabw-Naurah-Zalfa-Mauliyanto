@@ -19,3 +19,14 @@ const namaPanggilan = profil.namaPanggilan ?? profil.nama;
 console.log(`Nama panggilan: ${namaPanggilan}`);
 
 console.log(`Keahlian pertama: ${profil.keahlian?.[0]}`);
+
+function buatPerkenalan({ nama, peran }) {
+    return `${nama} — ${peran}`;
+}
+
+const formatKeahlian = (daftar) => {
+    return daftar.join(" · ");
+};
+
+console.log(buatPerkenalan(profil));
+console.log(formatKeahlian(profil.keahlian));
