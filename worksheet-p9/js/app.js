@@ -31,7 +31,7 @@ const formatKeahlian = (daftar) => {
 console.log(buatPerkenalan(profil));
 console.log(formatKeahlian(profil.keahlian));
 
-const daftarProyek = [
+export const daftarProyek = [
     {
         judul: "Halaman Profil",
         tahun: 2026,

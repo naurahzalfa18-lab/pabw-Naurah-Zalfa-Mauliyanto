@@ -37,3 +37,7 @@ harus mengubah warna tombol, tautan, judul, dan garis fokus.
 
 ## Catatan penggunaan AI
 Menggunakkan AI untuk menentukan warna, dan kontras rasio
+
+## Pertemuan 8 - app.js
+## Catatan penggunaan AI
+Menggunakkan AI untuk  memahami materi JavaScript ES6+, menyusun contoh kode, daan memahami fungsi murni
