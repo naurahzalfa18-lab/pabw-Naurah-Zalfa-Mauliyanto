@@ -11,6 +11,8 @@ function buatKartu(proyek) {
     return li;
 }
 
+wadah.textContent = "";
+
 daftarProyek.forEach((proyek) => {
     wadah.append(buatKartu(proyek));
 });
