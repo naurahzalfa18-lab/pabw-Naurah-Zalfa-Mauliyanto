@@ -35,17 +35,20 @@ export const daftarProyek = [
     {
         judul: "Halaman Profil",
         tahun: 2026,
-        selesai: true
+        selesai: true,
+        kategori: "web"
     },
     {
         judul: "Website Rencana Belajar",
         tahun: 2026,
-        selesai: true
+        selesai: true,
+        kategori: "web"
     },
     {
         judul: "Aplikasi Login",
         tahun: 2026,
-        selesai: false
+        selesai: false,
+        kategori: "web"
     }
 ];
 
