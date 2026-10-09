@@ -85,6 +85,8 @@ function validasiForm() {
 
     const sah = materiValid && catatanValid && rencanaValid;
 
+    tombolSimpan.disabled = !sah;
+
     return sah;
 }
 
@@ -100,6 +102,8 @@ function validasiForm() {
 
     });
 });
+
+tombolSimpan.disabled = true;
 
 form.addEventListener("submit", (event) => {
     event.preventDefault();

@@ -41,3 +41,7 @@ Menggunakkan AI untuk menentukan warna, dan kontras rasio
 ## Pertemuan 8 - app.js
 ## Catatan penggunaan AI
 Menggunakkan AI untuk  memahami materi JavaScript ES6+, menyusun contoh kode, daan memahami fungsi murni
+
+## Pertemuan 9 - dom.js
+## Catatan penggunaan AI
+Menggunakan AI untuk memahami DOM, event delegation, manipulasi elemen HTML, dan validasi form. Kode diperiksa dan diuji kembali secara mandiri.
