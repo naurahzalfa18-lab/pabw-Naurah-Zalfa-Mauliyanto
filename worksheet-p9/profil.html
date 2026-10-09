@@ -72,55 +72,54 @@
 
             <h2>Evaluasi Belajar</h2>
 
-            <form
-                action="/simpan"
-                method="post"
-            >
+            <form>
 
-                <p>
-                    <label for="materi">
-                        Materi yang dipelajari
-                    </label>
+    <p>
+        <label for="materi">
+            Materi yang dipelajari
+        </label>
 
-                    <input
-                        type="text"
-                        id="materi"
-                        name="materi"
-                        required
-                    >
-                </p>
+        <input
+            type="text"
+            id="materi"
+            name="materi"
+        >
+        <small id="error-materi"></small>
+    </p>
 
-                <p>
-                    <label for="catatan-evaluasi">
-                        Catatan Evaluasi
-                    </label>
+    <p>
+        <label for="catatan-evaluasi">
+            Catatan Evaluasi
+        </label>
 
-                    <input
-                        type="text"
-                        id="catatan-evaluasi"
-                        name="catatan-evaluasi"
-                        required
-                    >
-                </p>
+        <input
+            type="text"
+            id="catatan-evaluasi"
+            name="catatan-evaluasi"
+        >
 
-                <p>
-                    <label for="rencana-perbaikan">
-                        Rencana Perbaikan
-                    </label>
+        <small id="error-catatan"></small>
+    </p>
 
-                    <input
-                        type="text"
-                        id="rencana-perbaikan"
-                        name="rencana-perbaikan"
-                        required
-                    >
-                </p>
+    <p>
+        <label for="rencana-perbaikan">
+            Rencana Perbaikan
+        </label>
 
-                <button type="submit">
-                    Simpan
-                </button>
+        <input
+            type="text"
+            id="rencana-perbaikan"
+            name="rencana-perbaikan"
+        >
 
-            </form>
+        <small id="error-rencana"></small>
+    </p>
+
+    <button type="submit">
+        Simpan
+    </button>
+           
+ </form>
 
         </section>
 
