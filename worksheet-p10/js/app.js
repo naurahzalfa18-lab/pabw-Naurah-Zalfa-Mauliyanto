@@ -38,7 +38,7 @@ async function tampilkanData() {
 
     wadah.textContent = '';
 
-    data.forEach(function (post) {
+    data.slice(0, 5).forEach(function (post) {
       const kartu = document.createElement('article');
 
       const judul = document.createElement('h3');
