@@ -1,21 +1,19 @@
 
-const ALAMAT = "https://jsonplaceholder.typicode.com/posts";
+const ALAMAT = 'https://jsonplaceholder.typicode.com/salah';
 
-export async function muat() {
-    try {
-        const respons = await fetch(ALAMAT);
+export async function ambilNotisia() {
+  try {
+    const respons = await fetch(ALAMAT);
 
-        console.log("Content-Type:", respons.headers.get("content-type"));
-        console.log("status", respons.status, "ok", respons.ok);
-
-        if (!respons.ok) {
-            throw new Error("status " + respons.status);
-        }
-
-        return await respons.json();
-    } catch (error) {
-        console.error("Terjadi kesalahan saat memuat API:", error);
-        throw error;
+    if (!respons.ok) {
+      throw new Error('status ' + respons.status);
     }
-}
 
+    const data = await respons.json();
+    return data;
+
+  } catch (galat) {
+    console.error('Gagal memuat:', galat.message);
+    throw galat;
+  }
+}

@@ -1,96 +1,61 @@
 
-const nama = "Naurah Zalfa Mauliyanto";
+import { ambilNotisia } from './api.js';
 
-const profil = {
-    nama: "Naurah Zalfa Mauliyanto",
-    peran: "Mahasiswa Informatika yang sedang mengembangkan kemampuan di bidang teknologi dan web",
-    keahlian: ["HTML", "CSS", "JavaScript"]
-};
+async function ujiApi() {
+  try {
+    const data = await ambilNotisia();
 
-const jumlahProyek = 5;
+    console.log('Data lengkap:', data);
+    console.log('Data pertama:', data[0]);
+    console.log('Judul:', data[0].title);
+    console.log('Isi:', data[0].body);
+    console.log('Jenis data:', typeof data);
+    console.log('Jumlah data:', data.length);
 
-let pilihanAktif = "semua";
-
-const kalimat = `Nama saya ${profil.nama}, dan saya belajar ${profil.keahlian.length} hal.`;
-
-console.log(kalimat);
-
-const namaPanggilan = profil.namaPanggilan ?? profil.nama;
-
-console.log(`Nama panggilan: ${namaPanggilan}`);
-
-console.log(`Keahlian pertama: ${profil.keahlian?.[0]}`);
-
-function buatPerkenalan({ nama, peran }) {
-    return `${nama} — ${peran}`;
+    console.log('Data berhasil dimuat:', data);
+  } catch (galat) {
+    console.error(
+      'Pemanggil menangkap galat:',
+      galat.message
+    );
+  }
 }
 
-const formatKeahlian = (daftar) => {
-    return daftar.join(" · ");
-};
+ujiApi();
 
-console.log(buatPerkenalan(profil));
-console.log(formatKeahlian(profil.keahlian));
+const wadah = document.querySelector('#daftar-api');
 
-export const daftarProyek = [
-    {
-        judul: "Halaman Profil",
-        tahun: 2026,
-        selesai: true,
-        kategori: "web"
-    },
-    {
-        judul: "Website Rencana Belajar",
-        tahun: 2026,
-        selesai: true,
-        kategori: "web"
-    },
-    {
-        judul: "Aplikasi Login",
-        tahun: 2026,
-        selesai: false,
-        kategori: "web"
+async function tampilkanData() {
+  wadah.textContent = 'Memuat data...';
+
+  try {
+    const data = await ambilNotisia();
+
+    if (data.length === 0) {
+      wadah.textContent = 'Belum ada data.';
+      return;
     }
-];
 
-const judulProyek = daftarProyek.map((proyek) => proyek.judul);
-console.table(judulProyek);
+    wadah.textContent = '';
 
-const proyekSelesai = daftarProyek.filter((proyek) => proyek.selesai);
-console.table(proyekSelesai);
+    data.forEach(function (post) {
+      const kartu = document.createElement('article');
 
-const proyekLogin = daftarProyek.find(
-    (proyek) => proyek.judul === "Aplikasi Login"
-);
+      const judul = document.createElement('h3');
+      judul.textContent = post.title;
 
-console.log(proyekLogin);
+      const isi = document.createElement('p');
+      isi.textContent = post.body;
 
-const proyekUrut = [...daftarProyek].sort((a, b) => a.tahun - b.tahun);
-
-console.table(proyekUrut);
-console.table(daftarProyek);
-
-import { muat } from "./api.js";
-
-muat()
-    .then((data) => {
-        console.log(data);
-
-        console.log("userId:", data[0].userId);
-        console.log("id:", data[0].id);
-        console.log("title:", data[0].title);
-        console.log("body:", data[0].body);
-
-        console.log("Data API berhasil dimuat:", data);
-    })
-    .catch((error) => {
-        console.error("Gagal memuat API:", error);
-
-        const pesan = document.createElement("p");
-        pesan.textContent =
-            "Data gagal dimuat. Silakan periksa koneksi internet.";
-        pesan.style.color = "red";
-        pesan.setAttribute("role", "alert");
-
-        document.body.appendChild(pesan);
+      kartu.appendChild(judul);
+      kartu.appendChild(isi);
+      wadah.appendChild(kartu);
     });
+
+  } catch (galat) {
+    wadah.textContent = 'Gagal memuat data: ' + galat.message;
+  }
+}
+
+tampilkanData();
+

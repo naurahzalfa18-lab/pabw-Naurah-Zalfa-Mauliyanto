@@ -29,10 +29,7 @@
 
             <div class="navigasi-bawah">
 
-                <nav
-                    class="navbar"
-                    aria-label="Navigasi utama"
-                >
+                <nav class="navbar" aria-label="Navigasi utama">
                     <ul>
                         <li>
                             <a href="#beranda">Beranda</a>
@@ -65,68 +62,63 @@
 
     <main class="content">
 
-        <section
-            id="bagian-2"
-            class="sisi"
-        >
+        <section id="bagian-2" class="sisi">
 
             <h2>Evaluasi Belajar</h2>
 
             <form>
 
-    <p>
-        <label for="materi">
-            Materi yang dipelajari
-        </label>
+                <p>
+                    <label for="materi">
+                        Materi yang dipelajari
+                    </label>
 
-        <input
-            type="text"
-            id="materi"
-            name="materi"
-        >
-        <small id="error-materi"></small>
-    </p>
+                    <input
+                        type="text"
+                        id="materi"
+                        name="materi"
+                    >
 
-    <p>
-        <label for="catatan-evaluasi">
-            Catatan Evaluasi
-        </label>
+                    <small id="error-materi"></small>
+                </p>
 
-        <input
-            type="text"
-            id="catatan-evaluasi"
-            name="catatan-evaluasi"
-        >
+                <p>
+                    <label for="catatan-evaluasi">
+                        Catatan Evaluasi
+                    </label>
 
-        <small id="error-catatan"></small>
-    </p>
+                    <input
+                        type="text"
+                        id="catatan-evaluasi"
+                        name="catatan-evaluasi"
+                    >
 
-    <p>
-        <label for="rencana-perbaikan">
-            Rencana Perbaikan
-        </label>
+                    <small id="error-catatan"></small>
+                </p>
 
-        <input
-            type="text"
-            id="rencana-perbaikan"
-            name="rencana-perbaikan"
-        >
+                <p>
+                    <label for="rencana-perbaikan">
+                        Rencana Perbaikan
+                    </label>
 
-        <small id="error-rencana"></small>
-    </p>
+                    <input
+                        type="text"
+                        id="rencana-perbaikan"
+                        name="rencana-perbaikan"
+                    >
 
-    <button type="submit">
-        Simpan
-    </button>
-           
- </form>
+                    <small id="error-rencana"></small>
+                </p>
+
+                <button type="submit">
+                    Simpan
+                </button>
+
+            </form>
 
         </section>
 
-        <section
-            id="bagian-1"
-            class="utama"
-        >
+        <section id="bagian-1" class="utama">
 
             <h2>Jadwal Belajar</h2>
 
@@ -198,13 +190,23 @@
             </figure>
 
         </section>
-                    <section>
+
+        <section>
+
             <h2>Proyek</h2>
 
             <div id="filter">
-                <button data-kategori="semua" class="aktif">Semua</button>
-                <button data-kategori="web">Web</button>
-                <button data-kategori="data">Data</button>
+                <button data-kategori="semua" class="aktif">
+                    Semua
+                </button>
+
+                <button data-kategori="web">
+                    Web
+                </button>
+
+                <button data-kategori="data">
+                    Data
+                </button>
             </div>
 
             <ul id="daftar"></ul>
@@ -212,6 +214,16 @@
             <p id="pesan-kosong" hidden>
                 Tidak ada proyek pada kategori itu.
             </p>
+
+        </section>
+
+    
+        <section id="bagian-api">
+
+            <h2>Data dari API</h2>
+
+            <div id="daftar-api"></div>
+
         </section>
 
     </main>
