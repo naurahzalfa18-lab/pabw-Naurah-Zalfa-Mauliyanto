@@ -1,3 +1,4 @@
+
 const nama = "Naurah Zalfa Mauliyanto";
 
 const profil = {
@@ -69,7 +70,6 @@ const proyekUrut = [...daftarProyek].sort((a, b) => a.tahun - b.tahun);
 console.table(proyekUrut);
 console.table(daftarProyek);
 
-
 import { muat } from "./api.js";
 
 muat()
@@ -78,6 +78,12 @@ muat()
     })
     .catch((error) => {
         console.error("Gagal memuat API:", error);
+
+        const pesan = document.createElement("p");
+        pesan.textContent =
+            "Data gagal dimuat. Silakan periksa koneksi internet.";
+        pesan.style.color = "red";
+        pesan.setAttribute("role", "alert");
+
+        document.body.appendChild(pesan);
     });
-
-

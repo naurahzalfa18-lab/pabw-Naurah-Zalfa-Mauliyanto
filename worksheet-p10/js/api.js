@@ -2,14 +2,20 @@
 const ALAMAT = "https://jsonplaceholder.typicode.com/posts";
 
 export async function muat() {
-    const respons = await fetch(ALAMAT);
-    console.log("Content-Type:", respons.headers.get("content-type"));
+    try {
+        const respons = await fetch(ALAMAT);
 
-    console.log("status", respons.status, "ok", respons.ok);
+        console.log("Content-Type:", respons.headers.get("content-type"));
+        console.log("status", respons.status, "ok", respons.ok);
 
-    if (!respons.ok) {
-        throw new Error("status " + respons.status);
+        if (!respons.ok) {
+            throw new Error("status " + respons.status);
+        }
+
+        return await respons.json();
+    } catch (error) {
+        console.error("Terjadi kesalahan saat memuat API:", error);
+        throw error;
     }
-
-    return respons.json();
 }
+
