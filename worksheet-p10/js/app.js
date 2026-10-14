@@ -74,6 +74,13 @@ import { muat } from "./api.js";
 
 muat()
     .then((data) => {
+        console.log(data);
+
+        console.log("userId:", data[0].userId);
+        console.log("id:", data[0].id);
+        console.log("title:", data[0].title);
+        console.log("body:", data[0].body);
+
         console.log("Data API berhasil dimuat:", data);
     })
     .catch((error) => {
