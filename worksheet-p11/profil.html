@@ -1,11 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="id">
 
 <head>
-    <title>Rencana Belajar Harian Saya</title>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rencana Belajar Harian Saya</title>
 
     <link rel="stylesheet" href="tokens.css">
     <link rel="stylesheet" href="base.css">
@@ -18,7 +18,6 @@
 <body class="page">
 
     <header id="beranda">
-
         <div class="header-baris">
 
             <h1>Rencana Belajar Harian Saya</h1>
@@ -28,23 +27,11 @@
             </p>
 
             <div class="navigasi-bawah">
-
-                <nav
-                    class="navbar"
-                    aria-label="Navigasi utama"
-                >
+                <nav class="navbar" aria-label="Navigasi utama">
                     <ul>
-                        <li>
-                            <a href="#beranda">Beranda</a>
-                        </li>
-
-                        <li>
-                            <a href="#bagian-1">Jadwal Belajar</a>
-                        </li>
-
-                        <li>
-                            <a href="#bagian-2">Evaluasi Belajar</a>
-                        </li>
+                        <li><a href="#beranda">Beranda</a></li>
+                        <li><a href="#bagian-1">Jadwal Belajar</a></li>
+                        <li><a href="#bagian-2">Evaluasi Belajar</a></li>
                     </ul>
                 </nav>
 
@@ -56,87 +43,53 @@
                     >
                     Tema gelap
                 </label>
-
             </div>
 
         </div>
-
     </header>
 
     <main class="content">
 
-        <section
-            id="bagian-2"
-            class="sisi"
-        >
-
+        <section id="bagian-2" class="sisi">
             <h2>Evaluasi Belajar</h2>
 
             <form>
+                <p>
+                    <label for="materi">Materi yang dipelajari</label>
+                    <input type="text" id="materi" name="materi">
+                    <small id="error-materi"></small>
+                </p>
 
-    <p>
-        <label for="materi">
-            Materi yang dipelajari
-        </label>
+                <p>
+                    <label for="catatan-evaluasi">Catatan Evaluasi</label>
+                    <input
+                        type="text"
+                        id="catatan-evaluasi"
+                        name="catatan-evaluasi"
+                    >
+                    <small id="error-catatan"></small>
+                </p>
 
-        <input
-            type="text"
-            id="materi"
-            name="materi"
-        >
-        <small id="error-materi"></small>
-    </p>
+                <p>
+                    <label for="rencana-perbaikan">Rencana Perbaikan</label>
+                    <input
+                        type="text"
+                        id="rencana-perbaikan"
+                        name="rencana-perbaikan"
+                    >
+                    <small id="error-rencana"></small>
+                </p>
 
-    <p>
-        <label for="catatan-evaluasi">
-            Catatan Evaluasi
-        </label>
-
-        <input
-            type="text"
-            id="catatan-evaluasi"
-            name="catatan-evaluasi"
-        >
-
-        <small id="error-catatan"></small>
-    </p>
-
-    <p>
-        <label for="rencana-perbaikan">
-            Rencana Perbaikan
-        </label>
-
-        <input
-            type="text"
-            id="rencana-perbaikan"
-            name="rencana-perbaikan"
-        >
-
-        <small id="error-rencana"></small>
-    </p>
-
-    <button type="submit">
-        Simpan
-    </button>
-           
- </form>
-
+                <button type="submit">Simpan</button>
+            </form>
         </section>
 
-        <section
-            id="bagian-1"
-            class="utama"
-        >
-
+        <section id="bagian-1" class="utama">
             <h2>Jadwal Belajar</h2>
 
             <div class="table-wrap">
-
                 <table>
-
-                    <caption>
-                        Jadwal Belajar Harian
-                    </caption>
+                    <caption>Jadwal Belajar Harian</caption>
 
                     <thead>
                         <tr>
@@ -147,65 +100,64 @@
                     </thead>
 
                     <tbody>
-
                         <tr>
                             <th scope="row">Senin</th>
                             <td>Materi CSS</td>
                             <td>80%</td>
                         </tr>
-
                         <tr>
                             <th scope="row">Selasa</th>
                             <td>Materi JavaScript</td>
                             <td>80%</td>
                         </tr>
-
                         <tr>
                             <th scope="row">Rabu</th>
                             <td>Materi HTML</td>
                             <td>75%</td>
                         </tr>
-
                         <tr>
                             <th scope="row">Kamis</th>
                             <td>Materi Python</td>
                             <td>60%</td>
                         </tr>
-
                         <tr>
                             <th scope="row">Jumat</th>
                             <td>Materi React</td>
                             <td>50%</td>
                         </tr>
-
                     </tbody>
-
                 </table>
-
             </div>
 
             <figure>
-
                 <img
                     src="belajar.jpe"
                     alt="A person studying hard and never giving up on their dreams"
                 >
-
                 <figcaption>
                     A person studying hard and never giving up on their dreams
                 </figcaption>
-
             </figure>
-
         </section>
-                    <section>
+
+        <section id="bagian-proyek">
             <h2>Proyek</h2>
 
             <div id="filter">
-                <button data-kategori="semua" class="aktif">Semua</button>
-                <button data-kategori="web">Web</button>
-                <button data-kategori="data">Data</button>
+                <button type="button" data-kategori="semua" class="aktif">
+                    Semua
+                </button>
+                <button type="button" data-kategori="web">
+                    Web
+                </button>
+                <button type="button" data-kategori="data">
+                    Data
+                </button>
             </div>
+
+            <button id="atur-ulang" type="button">
+                Atur Ulang Pilihan
+            </button>
 
             <ul id="daftar"></ul>
 
@@ -217,11 +169,7 @@
     </main>
 
     <footer>
-
-        <p>
-            Naurah Zalfa Mauliyanto · 25523075 · 2026
-        </p>
-
+        <p>Naurah Zalfa Mauliyanto · 25523075 · 2026</p>
     </footer>
 
     <script type="module" src="js/app.js"></script>

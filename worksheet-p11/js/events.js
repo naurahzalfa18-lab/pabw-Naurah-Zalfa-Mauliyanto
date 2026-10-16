@@ -1,7 +1,8 @@
-import { pilihKategori } from "./state.js";
-import { render, tandaiTombolAktif } from "./dom.js";
+
+import { pilihKategori, resetKategori } from "./state.js";
 
 export function pasangEvent() {
+    // Filter kategori proyek
     const barisFilter = document.querySelector("#filter");
 
     barisFilter.addEventListener("click", (event) => {
@@ -12,6 +13,14 @@ export function pasangEvent() {
         pilihKategori(tombol.dataset.kategori);
     });
 
+    // Tombol atur ulang kategori
+    const tombolAturUlang = document.querySelector("#atur-ulang");
+
+    tombolAturUlang.addEventListener("click", () => {
+        resetKategori();
+    });
+
+    // Form Evaluasi Belajar
     const form = document.querySelector("form");
 
     const kolomForm = [
@@ -33,6 +42,7 @@ export function pasangEvent() {
         "button[type='submit']"
     );
 
+    // Memeriksa satu kolom
     function validasiKolom(kolom, pesanError) {
         const valid = kolom.value.trim() !== "";
 
@@ -45,6 +55,7 @@ export function pasangEvent() {
         return valid;
     }
 
+    // Memeriksa seluruh kolom
     function validasiForm() {
         return kolomForm
             .map(([kolom, pesanError]) =>
@@ -53,21 +64,27 @@ export function pasangEvent() {
             .every(Boolean);
     }
 
+    // Mengatur status tombol Simpan
     function perbaruiTombol() {
         tombolSimpan.disabled = !kolomForm.every(
             ([kolom]) => kolom.value.trim() !== ""
         );
     }
 
+    // Tombol nonaktif saat halaman pertama dibuka
     tombolSimpan.disabled = true;
 
+    // Memeriksa kolom setiap kali pengguna mengetik
     kolomForm.forEach(([kolom, pesanError]) => {
         kolom.addEventListener("input", () => {
+            console.log("Input terdeteksi:", kolom.id, kolom.value);
+
             validasiKolom(kolom, pesanError);
             perbaruiTombol();
         });
     });
 
+    // Memproses pengiriman formulir
     form.addEventListener("submit", (event) => {
         event.preventDefault();
 
@@ -83,6 +100,7 @@ export function pasangEvent() {
 
         console.log("Form berhasil dikirim tanpa reload.");
 
+        // Mengosongkan formulir setelah berhasil
         form.reset();
 
         kolomForm.forEach(([kolom, pesanError]) => {

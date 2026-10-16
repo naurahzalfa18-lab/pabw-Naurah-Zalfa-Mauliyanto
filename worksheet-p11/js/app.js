@@ -4,3 +4,4 @@ import { pasangEvent } from "./events.js";
 
 render(state);
 pasangEvent();
+
