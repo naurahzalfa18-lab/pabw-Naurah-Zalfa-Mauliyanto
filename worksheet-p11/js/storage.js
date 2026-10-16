@@ -13,14 +13,18 @@ export function simpan(state) {
 
 export function muat() {
     try {
-        const teks = localStorage.getItem(KUNCI);
+        const isi = JSON.parse(localStorage.getItem(KUNCI));
 
-        if (teks === null) {
+        // Jika simpanan kosong atau versinya tidak cocok
+        if (isi?.versi !== VERSI) {
+            localStorage.removeItem(KUNCI);
             return null;
         }
 
-        return JSON.parse(teks);
+        return isi;
     } catch {
+        // Jika isi simpanan rusak atau bukan JSON yang sah
+        localStorage.removeItem(KUNCI);
         return null;
     }
 }
