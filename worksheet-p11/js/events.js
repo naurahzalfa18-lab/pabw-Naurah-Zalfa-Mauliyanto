@@ -1,26 +1,15 @@
-import { state, ubahPilihan } from "./state.js";
-import { renderProyek, tandaiTombolAktif } from "./dom.js";
-import { daftarProyek } from "./data.js";
+import { pilihKategori } from "./state.js";
+import { render, tandaiTombolAktif } from "./dom.js";
 
 export function pasangEvent() {
-   
     const barisFilter = document.querySelector("#filter");
 
     barisFilter.addEventListener("click", (event) => {
-        const tombol = event.target.closest("button");
+        const tombol = event.target.closest("button[data-kategori]");
 
         if (!tombol) return;
 
-        ubahPilihan(tombol.dataset.kategori);
-
-        const terpilih = daftarProyek.filter(
-            (proyek) =>
-                state.pilihanAktif === "semua" ||
-                proyek.kategori === state.pilihanAktif
-        );
-
-        tandaiTombolAktif(tombol);
-        renderProyek(terpilih);
+        pilihKategori(tombol.dataset.kategori);
     });
 
     const form = document.querySelector("form");
