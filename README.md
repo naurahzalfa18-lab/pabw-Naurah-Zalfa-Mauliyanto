@@ -45,3 +45,7 @@ Menggunakkan AI untuk  memahami materi JavaScript ES6+, menyusun contoh kode, da
 ## Pertemuan 9 - dom.js
 ## Catatan penggunaan AI
 Menggunakan AI untuk memahami DOM, event delegation, manipulasi elemen HTML, dan validasi form. Kode diperiksa dan diuji kembali secara mandiri.
+
+## Pertemuan 9 - dom.js
+## Catatan penggunaan AI
+Menggunakan AI untuk membantu memahami materi JavaScript asinkron, penggunaan fetch, promise, dan JSON, serta membantu memperbaiki kode. Saya tetap mencoba menjalankan kode dan menguji hasilnya secara mandiri.
