@@ -1,0 +1,111 @@
+
+.form-kolom {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+label {
+    font-size: var(--text-sm);
+    font-weight: 600;
+}
+
+input,
+select,
+textarea {
+    font: inherit;
+    padding: var(--space-2) var(--space-3);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+    color: var(--color-fg);
+}
+
+button {
+    font: inherit;
+    padding: var(--space-2) var(--space-4);
+    border: 1px solid transparent;
+    border-radius: var(--radius-md);
+    background: var(--color-primary);
+    color: var(--color-surface);
+    cursor: pointer;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+:focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+}
+
+input:user-invalid {
+    border-color: var(--color-danger);
+    border-width: 2px;
+}
+
+.pesan-galat {
+    display: none;
+    color: #dc2626;
+    font-size: var(--text-sm);
+}
+
+#error-materi,
+#error-catatan,
+#error-rencana {
+    display: block;
+    color: #dc2626;
+    font-size: var(--text-sm);
+    margin-top: 4px;
+}
+
+.kartu {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+/* Bagian proyek */
+#filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 0;
+}
+
+#filter button {
+    padding: 12px 20px;
+    font-size: 16px;
+}
+
+#filter button.aktif {
+    background: var(--color-primary);
+}
+
+#atur-ulang {
+    display: block;
+    margin: 0 0 24px;
+    padding: 12px 20px;
+    font-size: 16px;
+}
+
+#daftar {
+    width: 100%;
+    max-width: 700px;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+#daftar .kartu {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 16px 0;
+    margin: 0 0 8px;
+    border-bottom: 1px solid var(--color-border);
+    overflow-wrap: anywhere;
+}
